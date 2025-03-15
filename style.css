@@ -129,7 +129,7 @@ header .btn {
   border: 1px solid rgba(255, 255, 255, 0.386);
 }
 
-/* --------------------------------------------------------------- */
+/* ------------------------break point--------------------------------------- */
 
 /* Trending Now Section */
 .trending {
@@ -320,4 +320,139 @@ footer
 .footer-bottom {
     margin-top: 10px;
     font-size: 12px;
+}
+
+
+
+
+
+
+/* responsiveness code */
+
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      height: auto;
+      padding: 20px 0;
+      text-align: center;
+  }
+
+  nav span {
+      margin-top: 10px;
+  }
+
+  nav img {
+      width: 80px; /* Slightly smaller logo for mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero > :first-child {
+      font-size: 32px; /* Reduce main heading size */
+  }
+
+  .hero > :nth-child(2),
+  .hero > :nth-child(3) {
+      font-size: 18px; /* Reduce subheading text size */
+  }
+
+  .email {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .email input {
+      width: 90%; /* Make input field take most of the width */
+      max-width: 400px;
+      padding: 10px;
+  }
+
+  .btn-red {
+      width: 90%;
+      max-width: 200px;
+      font-size: 16px;
+      padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .trending-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Show 2 movies per row */
+      gap: 10px;
+      justify-content: center;
+  }
+
+  .movie-card {
+      width: 100%; /* Ensure full width inside the grid */
+      height: auto;
+  }
+
+  .movie-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .reasons-container {
+      grid-template-columns: 1fr; /* Make it a single column */
+      gap: 15px;
+  }
+
+  .reason-box {
+      padding: 15px;
+  }
+
+  .reason-box img {
+      width: 50px; /* Slightly smaller icons for better scaling */
+  }
+
+  .reason-box h3 {
+      font-size: 16px; /* Adjust heading size */
+  }
+
+  .reason-box p {
+      font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .faq-container {
+      width: 90%; /* Reduce width for better focus */
+  }
+
+  .faq-question {
+      font-size: 16px; /* Reduce question size slightly */
+      padding: 12px;
+  }
+
+  .faq-answer p {
+      font-size: 14px;
+      padding: 8px 0;
+  }
+}
+@media (max-width: 768px) {
+  .footer-links {
+      flex-direction: column; /* Stack links vertically */
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+  }
+
+  .footer-links ul {
+      padding: 0;
+  }
+
+  .footer-links ul li {
+      margin-bottom: 5px;
+  }
+
+  .footer-lang {
+      text-align: center;
+      margin-top: 20px;
+  }
+
+  .footer-bottom {
+      text-align: center;
+  }
 }
